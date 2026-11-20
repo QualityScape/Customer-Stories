@@ -97,18 +97,29 @@ h1 {
 /* VIDEO GALLERY */
 
 main {
-  width: min(1160px, calc(100% - 36px));
+  width: min(1002px, calc(100% - 36px));
   margin: 36px auto 48px;
 }
 
+/* THREE CENTRED VIDEO CARDS */
+
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 310px));
+
+  gap: 36px;
+
+  justify-content: center;
   align-items: stretch;
 }
 
+/* INDIVIDUAL CARD */
+
 .card {
+  width: 100%;
+
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -121,11 +132,14 @@ main {
   flex-direction: column;
 }
 
-/* VIDEO PLAYER */
+/* VIDEO PLAYER - TALLER PREVIEW */
 
 .player {
   position: relative;
-  aspect-ratio: 16/9;
+
+  width: 100%;
+  height: 300px;
+
   background: #4477d0;
   overflow: hidden;
 }
@@ -137,21 +151,18 @@ main {
   inset: 0;
 
   display: block;
+
   width: 100%;
   height: 100%;
 
   border: 0;
   padding: 0;
-  cursor: pointer;
 
+  cursor: pointer;
   background: #4477d0;
 }
 
-/*
-IMPORTANT:
-object-fit: contain ensures the entire
-thumbnail is visible without cropping.
-*/
+/* DISPLAY ENTIRE IMAGE WITHOUT CROPPING */
 
 .poster img {
   width: 100%;
@@ -171,6 +182,7 @@ thumbnail is visible without cropping.
 
 .play {
   position: absolute;
+
   left: 50%;
   top: 50%;
 
@@ -178,8 +190,8 @@ thumbnail is visible without cropping.
 
   width: 58px;
   height: 58px;
-  border-radius: 50%;
 
+  border-radius: 50%;
   background: #ffffff;
 
   display: grid;
@@ -191,6 +203,7 @@ thumbnail is visible without cropping.
 .play svg {
   width: 25px;
   height: 25px;
+
   fill: #245aab;
   margin-left: 4px;
 }
@@ -245,13 +258,14 @@ h2 {
   flex: 1;
 }
 
-/* WATCH BUTTON */
+/* WATCH CUSTOMER STORY BUTTON */
 
 .watch {
   align-self: flex-start;
 
   background: #ffffff;
   border: 1px solid var(--blue);
+
   color: #245aab;
 
   border-radius: 7px;
@@ -269,18 +283,24 @@ h2 {
   background: #eff5ff;
 }
 
-/* TABLET */
+/* TABLET VIEW */
 
 @media (max-width: 850px) {
 
+  main {
+    width: min(656px, calc(100% - 32px));
+  }
+
   .cards {
     grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+      repeat(2, minmax(0, 310px));
+
+    gap: 28px;
   }
 
 }
 
-/* MOBILE */
+/* MOBILE VIEW */
 
 @media (max-width: 620px) {
 
@@ -289,13 +309,17 @@ h2 {
   }
 
   main {
-    width: min(440px, calc(100% - 28px));
+    width: min(310px, calc(100% - 28px));
     margin: 24px auto 35px;
   }
 
   .cards {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    grid-template-columns: minmax(0, 310px);
+    gap: 24px;
+  }
+
+  .player {
+    height: 300px;
   }
 
 }
