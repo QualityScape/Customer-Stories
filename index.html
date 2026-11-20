@@ -1,409 +1,228 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#4477d0">
-  <meta name="description" content="Hear firsthand experiences from ESMS Global, Nanox Vision and Ionetix on their digital quality management journeys.">
 
   <title>eQMS Customer Stories | Real Experiences. Real Results.</title>
 
-  <!-- LinkedIn, WhatsApp and social media preview -->
+  <meta name="description" content="Three firsthand customer stories from ESMS Global, Nanox Vision and Ionetix about adopting Simploud eQMS.">
+
+  <!-- LinkedIn and WhatsApp preview -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="QualityScape">
   <meta property="og:title" content="eQMS Customer Stories | Real Experiences. Real Results.">
-  <meta property="og:description" content="Hear firsthand experiences from ESMS Global, Nanox Vision and Ionetix on their digital quality journeys in life sciences.">
+  <meta property="og:description" content="Hear firsthand experiences from ESMS Global, Nanox Vision and Ionetix on their digital quality journeys.">
   <meta property="og:url" content="https://qualityscape.github.io/Customer-Stories/">
   <meta property="og:image" content="https://qualityscape.github.io/Customer-Stories/Customer-Stories-Thumbnail.png">
-  <meta property="og:image:secure_url" content="https://qualityscape.github.io/Customer-Stories/Customer-Stories-Thumbnail.png">
-  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="eQMS Customer Stories: ESMS Global, Nanox Vision and Ionetix. Real Experiences. Real Results.">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="eQMS Customer Stories | Real Experiences. Real Results.">
-  <meta name="twitter:description" content="Three customer perspectives on digital quality management in life sciences.">
   <meta name="twitter:image" content="https://qualityscape.github.io/Customer-Stories/Customer-Stories-Thumbnail.png">
 
   <style>
     :root {
       --blue: #4477d0;
-      --blue-dark: #245aab;
       --ink: #18304c;
       --muted: #617389;
       --line: #dce6f2;
-      --background: #f6f9fd;
     }
 
     * {
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
+      background: #f6f9fd;
       color: var(--ink);
-      background: var(--background);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Arial, sans-serif;
     }
 
-    a {
-      color: inherit;
-    }
-
-    .container {
-      width: min(1160px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    /* Header */
-
-    .topbar {
-      background: #fff;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      min-height: 70px;
-    }
-
-    .brand {
-      color: var(--blue-dark);
-      text-decoration: none;
-      font-size: 21px;
-      font-weight: 800;
-      letter-spacing: -.6px;
-    }
-
-    .brand span {
-      font-weight: 400;
-      color: var(--muted);
-      font-size: 12px;
-      letter-spacing: .08em;
-      display: block;
-      margin-top: 3px;
-    }
-
-    .top-link {
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-      color: var(--blue-dark);
-    }
-
-    .top-link:hover {
-      text-decoration: underline;
-    }
-
-    /* Hero section */
+    /* Blue title banner */
 
     .hero {
       background: var(--blue);
-      color: white;
+      color: #fff;
       text-align: center;
-      padding: 65px 22px 68px;
+      padding: 56px 18px 60px;
     }
 
     .eyebrow {
-      text-transform: uppercase;
       font-size: 12px;
       font-weight: 700;
       letter-spacing: .15em;
-      opacity: .92;
+      text-transform: uppercase;
     }
 
     h1 {
-      margin: 17px auto 15px;
-      font-size: clamp(31px, 4.4vw, 51px);
-      line-height: 1.14;
+      margin: 15px 0 12px;
+      font-size: clamp(29px, 4.4vw, 49px);
+      line-height: 1.15;
       letter-spacing: -.035em;
     }
 
     .hero p {
-      font-size: clamp(15px, 2vw, 18px);
-      line-height: 1.7;
-      opacity: .95;
-      margin: 0 auto;
-      max-width: 730px;
-    }
-
-    /* Main content */
-
-    main {
-      padding: 43px 0 63px;
-    }
-
-    .section-intro {
-      text-align: center;
-      max-width: 670px;
-      margin: 0 auto 30px;
-    }
-
-    h2 {
-      font-size: 25px;
-      letter-spacing: -.025em;
-      margin: 0 0 9px;
-    }
-
-    .section-intro p {
       margin: 0;
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 15px;
+      font-size: clamp(15px, 2vw, 18px);
     }
 
     /* Video gallery */
+
+    main {
+      width: min(1160px, calc(100% - 36px));
+      margin: 36px auto 48px;
+    }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
-      align-items: start;
+      align-items: stretch;
     }
 
     .card {
-      overflow: hidden;
       background: #fff;
       border: 1px solid var(--line);
-      border-radius: 15px;
-      box-shadow: 0 8px 27px rgba(25, 68, 117, .06);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(25, 68, 117, .06);
+      display: flex;
+      flex-direction: column;
     }
 
-    .player-shell {
+    .player {
       position: relative;
       aspect-ratio: 16/9;
-      background: #153765;
-      overflow: hidden;
+      background: #000;
     }
 
-    .poster-button {
+    .poster {
       position: absolute;
       inset: 0;
-      border: 0;
-      padding: 0;
+      display: block;
       width: 100%;
       height: 100%;
+      border: 0;
+      padding: 0;
       cursor: pointer;
-      background: #153765;
-      display: block;
-      color: #fff;
+      background: #14386b;
     }
 
-    .poster-button img {
-      display: block;
+    .poster img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      user-select: none;
+      display: block;
       -webkit-user-drag: none;
+      user-select: none;
     }
 
-    .poster-button::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, .18),
-        transparent 54%
-      );
-      pointer-events: none;
-    }
-
-    .play-icon {
+    .play {
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 62px;
-      height: 62px;
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, .96);
-      box-shadow: 0 7px 25px rgba(0, 0, 0, .23);
+      background: #fff;
       display: grid;
       place-items: center;
-      z-index: 1;
-      transition: transform .2s;
+      box-shadow: 0 4px 18px #0005;
     }
 
-    .play-icon svg {
-      width: 24px;
-      height: 24px;
-      fill: var(--blue-dark);
+    .play svg {
+      width: 25px;
+      height: 25px;
+      fill: #245aab;
       margin-left: 4px;
     }
 
-    .poster-button:hover .play-icon,
-    .poster-button:focus-visible .play-icon {
-      transform: translate(-50%, -50%) scale(1.08);
-    }
-
-    .poster-button:focus-visible {
-      outline: 3px solid white;
-      outline-offset: -5px;
-    }
-
     video {
+      display: none;
       position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
-      inset: 0;
       background: #000;
-      display: none;
       object-fit: contain;
     }
 
-    .player-shell.is-playing video {
+    .player.active video {
       display: block;
     }
 
-    .player-shell.is-playing .poster-button {
+    .player.active .poster {
       display: none;
     }
 
-    /* Customer descriptions */
+    /* Customer information */
 
-    .card-body {
-      padding: 22px 21px 24px;
+    .details {
+      padding: 19px 19px 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
-    .card-body h3 {
-      font-size: 21px;
-      margin: 0 0 8px;
-      letter-spacing: -.02em;
+    h2 {
+      font-size: 20px;
+      margin: 0 0 9px;
     }
 
-    .card-body p {
-      margin: 0 0 18px;
-      color: var(--muted);
+    .details p {
       font-size: 14px;
-      line-height: 1.65;
-      min-height: 70px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0 0 18px;
+      flex: 1;
     }
 
     .watch {
-      appearance: none;
+      align-self: flex-start;
+      background: #fff;
       border: 1px solid var(--blue);
-      background: white;
-      color: var(--blue-dark);
-      font: inherit;
-      font-weight: 700;
-      font-size: 14px;
-      padding: 10px 15px;
-      border-radius: 8px;
+      color: #245aab;
+      border-radius: 7px;
+      padding: 10px 13px;
       cursor: pointer;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
     }
 
     .watch:hover,
     .watch:focus-visible {
-      background: #edf4ff;
-    }
-
-    /* Call to action */
-
-    .cta {
-      text-align: center;
-      background: #edf3fc;
-      border: 1px solid var(--line);
-      padding: 32px 24px;
-      border-radius: 15px;
-      margin-top: 45px;
-    }
-
-    .cta h2 {
-      font-size: 24px;
-    }
-
-    .cta p {
-      max-width: 680px;
-      margin: 10px auto 23px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 12px 23px;
-      border-radius: 8px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      background: var(--blue-dark);
-    }
-
-    .cta-button:hover {
-      background: #19498f;
-    }
-
-    /* Footer */
-
-    footer {
-      background: white;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .footer-inner {
-      padding: 24px 0;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    footer a {
-      text-decoration: none;
-      color: var(--blue-dark);
+      background: #eff5ff;
     }
 
     /* Tablet */
 
-    @media (max-width: 860px) {
+    @media (max-width: 850px) {
       .cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .card-body p {
-        min-height: 0;
       }
     }
 
     /* Mobile */
 
     @media (max-width: 620px) {
-      .container {
-        width: min(100% - 28px, 440px);
+      .hero {
+        padding: 45px 15px 48px;
       }
 
-      .hero {
-        padding: 48px 18px 52px;
+      main {
+        width: min(440px, calc(100% - 28px));
+        margin: 24px auto 35px;
       }
 
       .cards {
         grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      main {
-        padding-top: 35px;
-      }
-
-      .card-body {
-        padding: 19px;
-      }
-
-      .topbar-inner {
-        min-height: 64px;
+        gap: 18px;
       }
     }
   </style>
@@ -411,32 +230,9 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- TITLE BANNER -->
 
-  <header class="topbar">
-    <div class="container topbar-inner">
-
-      <a class="brand"
-         href="https://www.quality-scape.com/"
-         target="_blank"
-         rel="noopener noreferrer">
-        QualityScape
-        <span>YOUR PARTNER IN COMPLIANCE</span>
-      </a>
-
-      <a class="top-link"
-         href="https://www.quality-scape.com/"
-         target="_blank"
-         rel="noopener noreferrer">
-        Visit QualityScape &rarr;
-      </a>
-
-    </div>
-  </header>
-
-  <!-- HERO -->
-
-  <section class="hero">
+  <header class="hero">
 
     <div class="eyebrow">
       eQMS Customer Stories
@@ -450,43 +246,29 @@
       Digital Quality Journeys in Life Sciences
     </p>
 
-  </section>
+  </header>
 
-  <!-- CUSTOMER STORIES -->
+  <!-- THREE CUSTOMER VIDEOS -->
 
-  <main class="container">
-
-    <div class="section-intro">
-
-      <h2>Hear From Our Customers</h2>
-
-      <p>
-        Explore firsthand perspectives from life sciences
-        organisations on their experiences adopting
-        digital quality management.
-      </p>
-
-    </div>
-
-    <div class="cards" id="stories">
+  <main>
+    <div class="cards">
 
       <!-- ESMS GLOBAL -->
 
       <article class="card">
 
-        <div class="player-shell">
+        <div class="player">
 
-          <button class="poster-button"
+          <button class="poster"
                   type="button"
-                  aria-label="Play ESMS Global customer story">
+                  aria-label="Play ESMS Global video">
 
             <img
               src="https://qualityscape.github.io/ESMS/ESMS%20Thumbnail.png"
-              alt="ESMS Global customer video thumbnail"
-              loading="lazy"
+              alt="ESMS Global testimonial thumbnail"
               draggable="false">
 
-            <span class="play-icon" aria-hidden="true">
+            <span class="play" aria-hidden="true">
               <svg viewBox="0 0 24 24">
                 <path d="M7 4.5v15l12-7.5z"/>
               </svg>
@@ -495,28 +277,27 @@
           </button>
 
           <video
-            playsinline
-            webkit-playsinline
             controls
+            playsinline
+            preload="none"
             controlsList="nodownload noplaybackrate noremoteplayback"
             disablePictureInPicture
             disableRemotePlayback
-            preload="none"
             oncontextmenu="return false"
-            aria-label="ESMS Global customer story"
-            data-src="https://qualityscape.github.io/ESMS/Simploud%20Testimonials_ESMS.mp4">
+            data-src="https://qualityscape.github.io/ESMS/Simploud%20Testimonials_ESMS.mp4"
+            aria-label="ESMS Global customer testimonial">
           </video>
 
         </div>
 
-        <div class="card-body">
+        <div class="details">
 
-          <h3>ESMS Global</h3>
+          <h2>ESMS Global</h2>
 
           <p>
-            Hear the ESMS Global team's experience of
-            adopting digital quality management in
-            their operations.
+            Alastair Scarborough, Operations Manager,
+            shares how ESMS Global adopted Simploud
+            to support quality management.
           </p>
 
           <button class="watch" type="button">
@@ -531,19 +312,18 @@
 
       <article class="card">
 
-        <div class="player-shell">
+        <div class="player">
 
-          <button class="poster-button"
+          <button class="poster"
                   type="button"
-                  aria-label="Play Nanox Vision customer story">
+                  aria-label="Play Nanox Vision video">
 
             <img
               src="https://qualityscape.github.io/Nanox/Nanox%20Thumbnail.png"
-              alt="Nanox Vision customer video thumbnail"
-              loading="lazy"
+              alt="Nanox Vision testimonial thumbnail"
               draggable="false">
 
-            <span class="play-icon" aria-hidden="true">
+            <span class="play" aria-hidden="true">
               <svg viewBox="0 0 24 24">
                 <path d="M7 4.5v15l12-7.5z"/>
               </svg>
@@ -552,28 +332,27 @@
           </button>
 
           <video
-            playsinline
-            webkit-playsinline
             controls
+            playsinline
+            preload="none"
             controlsList="nodownload noplaybackrate noremoteplayback"
             disablePictureInPicture
             disableRemotePlayback
-            preload="none"
             oncontextmenu="return false"
-            aria-label="Nanox Vision customer story"
-            data-src="https://qualityscape.github.io/Nanox/Simploud%20Testimonials_Nanox.mp4">
+            data-src="https://qualityscape.github.io/Nanox/Simploud%20Testimonials_Nanox.mp4"
+            aria-label="Nanox Vision customer testimonial">
           </video>
 
         </div>
 
-        <div class="card-body">
+        <div class="details">
 
-          <h3>Nanox Vision</h3>
+          <h2>Nanox Vision</h2>
 
           <p>
-            Learn about Nanox Vision's perspective on
-            selecting and using a digital quality
-            management solution.
+            Neta Sherman, VP of RA and Quality,
+            shares the benefits Nanox Vision gained
+            from using Simploud.
           </p>
 
           <button class="watch" type="button">
@@ -588,19 +367,18 @@
 
       <article class="card">
 
-        <div class="player-shell">
+        <div class="player">
 
-          <button class="poster-button"
+          <button class="poster"
                   type="button"
-                  aria-label="Play Ionetix customer story">
+                  aria-label="Play Ionetix video">
 
             <img
               src="https://qualityscape.github.io/Ionetix/Ionetix%20Thumbnail.png"
-              alt="Ionetix customer video thumbnail"
-              loading="lazy"
+              alt="Ionetix testimonial thumbnail"
               draggable="false">
 
-            <span class="play-icon" aria-hidden="true">
+            <span class="play" aria-hidden="true">
               <svg viewBox="0 0 24 24">
                 <path d="M7 4.5v15l12-7.5z"/>
               </svg>
@@ -609,28 +387,27 @@
           </button>
 
           <video
-            playsinline
-            webkit-playsinline
             controls
+            playsinline
+            preload="none"
             controlsList="nodownload noplaybackrate noremoteplayback"
             disablePictureInPicture
             disableRemotePlayback
-            preload="none"
             oncontextmenu="return false"
-            aria-label="Ionetix customer story"
-            data-src="https://qualityscape.github.io/Ionetix/Simploud%20Testimonials_Ionetix.mp4">
+            data-src="https://qualityscape.github.io/Ionetix/Simploud%20Testimonials_Ionetix.mp4"
+            aria-label="Ionetix customer testimonial">
           </video>
 
         </div>
 
-        <div class="card-body">
+        <div class="details">
 
-          <h3>Ionetix</h3>
+          <h2>Ionetix</h2>
 
           <p>
-            Discover how Ionetix approached its digital
-            quality management journey in the life
-            sciences sector.
+            Jill Wilson, Senior Director of QARA,
+            shares how Ionetix selected and adopted
+            Simploud for compliance management.
           </p>
 
           <button class="watch" type="button">
@@ -642,106 +419,53 @@
       </article>
 
     </div>
-
-    <!-- CONTACT SECTION -->
-
-    <section class="cta" aria-labelledby="cta-heading">
-
-      <h2 id="cta-heading">
-        Explore Digital Quality Management
-      </h2>
-
-      <p>
-        Interested in learning how Matrix Quality
-        (formerly Simploud) could support your
-        organisation's quality processes?
-        Let's start a conversation.
-      </p>
-
-      <a class="cta-button"
-         href="https://www.quality-scape.com/contact"
-         target="_blank"
-         rel="noopener noreferrer">
-        Contact QualityScape &rarr;
-      </a>
-
-    </section>
-
   </main>
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <div class="container footer-inner">
-
-      <span>
-        &copy; <span id="year">2026</span>
-        QualityScape. All rights reserved.
-      </span>
-
-      <a href="https://www.quality-scape.com/"
-         target="_blank"
-         rel="noopener noreferrer">
-        www.quality-scape.com
-      </a>
-
-    </div>
-
-  </footer>
 
   <!-- VIDEO PLAYBACK AND PROTECTION -->
 
   <script>
-    'use strict';
 
-    // Update copyright year automatically.
-    document.getElementById('year').textContent =
-      new Date().getFullYear();
-
-    const shells = [
-      ...document.querySelectorAll('.player-shell')
+    const players = [
+      ...document.querySelectorAll('.player')
     ];
 
-    const videos = shells.map(
-      shell => shell.querySelector('video')
+    const videos = players.map(
+      player => player.querySelector('video')
     );
 
-    // Play one video at a time.
-    function playStory(shell) {
+    // Load and play the selected video.
+    function playStory(player) {
 
-      const video = shell.querySelector('video');
+      const video = player.querySelector('video');
 
+      // Pause all other videos.
       videos.forEach(other => {
         if (other !== video) {
           other.pause();
         }
       });
 
-      // Load the video only when requested.
+      // Lazy-load the video file.
       if (!video.src) {
         video.src = video.dataset.src;
       }
 
-      shell.classList.add('is-playing');
+      player.classList.add('active');
 
-      video.play().catch(() => {
-        // Native play controls remain available.
-      });
+      video.play().catch(() => {});
 
     }
 
-    // Thumbnail click events.
-    shells.forEach(shell => {
+    // Handle thumbnail clicks and playback.
+    players.forEach(player => {
 
-      const poster = shell.querySelector('.poster-button');
-      const video = shell.querySelector('video');
+      const video = player.querySelector('video');
 
-      poster.addEventListener('click', () => {
-        playStory(shell);
-      });
+      player.querySelector('.poster')
+        .addEventListener('click', () => {
+          playStory(player);
+        });
 
-      // Pause the previous video.
       video.addEventListener('play', () => {
 
         videos.forEach(other => {
@@ -759,33 +483,23 @@
 
     });
 
-    // Watch Video buttons.
-    document.querySelectorAll('.card').forEach(card => {
+    // Watch Customer Story buttons.
+    document.querySelectorAll('.card')
+      .forEach(card => {
 
-      const button = card.querySelector('.watch');
+        card.querySelector('.watch')
+          .addEventListener('click', () => {
 
-      button.addEventListener('click', () => {
+            playStory(
+              card.querySelector('.player')
+            );
 
-        const shell = card.querySelector('.player-shell');
-
-        playStory(shell);
-
-        // Bring video into view on mobile devices.
-        if (
-          window.matchMedia('(max-width: 620px)').matches
-        ) {
-          shell.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
           });
-        }
 
       });
 
-    });
-
-    // Prevent thumbnail right-click and dragging.
-    document.querySelectorAll('.poster-button img')
+    // Disable thumbnail right-click and dragging.
+    document.querySelectorAll('.poster img')
       .forEach(img => {
 
         img.addEventListener('contextmenu', event => {
