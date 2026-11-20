@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4477d0">
+  <meta name="description" content="Hear firsthand experiences from ESMS Global, Nanox Vision and Ionetix on their digital quality management journeys.">
+
+  <title>eQMS Customer Stories | Real Experiences. Real Results.</title>
+
+  <!-- LinkedIn, WhatsApp and social media preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QualityScape">
+  <meta property="og:title" content="eQMS Customer Stories | Real Experiences. Real Results.">
+  <meta property="og:description" content="Hear firsthand experiences from ESMS Global, Nanox Vision and Ionetix on their digital quality journeys in life sciences.">
+  <meta property="og:url" content="https://qualityscape.github.io/Customer-Stories/">
+  <meta property="og:image" content="https://qualityscape.github.io/Customer-Stories/Customer-Stories-Thumbnail.png">
+  <meta property="og:image:secure_url" content="https://qualityscape.github.io/Customer-Stories/Customer-Stories-Thumbnail.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="eQMS Customer Stories: ESMS Global, Nanox Vision and Ionetix. Real Experiences. Real Results.">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="eQMS Customer Stories | Real Experiences. Real Results.">
+  <meta name="twitter:description" content="Three customer perspectives on digital quality management in life sciences.">
+  <meta name="twitter:image" content="https://qualityscape.github.io/Customer-Stories/Customer-Stories-Thumbnail.png">
+
+  <style>
+    :root {
+      --blue: #4477d0;
+      --blue-dark: #245aab;
+      --ink: #18304c;
+      --muted: #617389;
+      --line: #dce6f2;
+      --background: #f6f9fd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--background);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* Header */
+
+    .topbar {
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 70px;
+    }
+
+    .brand {
+      color: var(--blue-dark);
+      text-decoration: none;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -.6px;
+    }
+
+    .brand span {
+      font-weight: 400;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .08em;
+      display: block;
+      margin-top: 3px;
+    }
+
+    .top-link {
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--blue-dark);
+    }
+
+    .top-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero section */
+
+    .hero {
+      background: var(--blue);
+      color: white;
+      text-align: center;
+      padding: 65px 22px 68px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      opacity: .92;
+    }
+
+    h1 {
+      margin: 17px auto 15px;
+      font-size: clamp(31px, 4.4vw, 51px);
+      line-height: 1.14;
+      letter-spacing: -.035em;
+    }
+
+    .hero p {
+      font-size: clamp(15px, 2vw, 18px);
+      line-height: 1.7;
+      opacity: .95;
+      margin: 0 auto;
+      max-width: 730px;
+    }
+
+    /* Main content */
+
+    main {
+      padding: 43px 0 63px;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 670px;
+      margin: 0 auto 30px;
+    }
+
+    h2 {
+      font-size: 25px;
+      letter-spacing: -.025em;
+      margin: 0 0 9px;
+    }
+
+    .section-intro p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+
+    /* Video gallery */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      align-items: start;
+    }
+
+    .card {
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      box-shadow: 0 8px 27px rgba(25, 68, 117, .06);
+    }
+
+    .player-shell {
+      position: relative;
+      aspect-ratio: 16/9;
+      background: #153765;
+      overflow: hidden;
+    }
+
+    .poster-button {
+      position: absolute;
+      inset: 0;
+      border: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      background: #153765;
+      display: block;
+      color: #fff;
+    }
+
+    .poster-button img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .poster-button::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, .18),
+        transparent 54%
+      );
+      pointer-events: none;
+    }
+
+    .play-icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .96);
+      box-shadow: 0 7px 25px rgba(0, 0, 0, .23);
+      display: grid;
+      place-items: center;
+      z-index: 1;
+      transition: transform .2s;
+    }
+
+    .play-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--blue-dark);
+      margin-left: 4px;
+    }
+
+    .poster-button:hover .play-icon,
+    .poster-button:focus-visible .play-icon {
+      transform: translate(-50%, -50%) scale(1.08);
+    }
+
+    .poster-button:focus-visible {
+      outline: 3px solid white;
+      outline-offset: -5px;
+    }
+
+    video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      background: #000;
+      display: none;
+      object-fit: contain;
+    }
+
+    .player-shell.is-playing video {
+      display: block;
+    }
+
+    .player-shell.is-playing .poster-button {
+      display: none;
+    }
+
+    /* Customer descriptions */
+
+    .card-body {
+      padding: 22px 21px 24px;
+    }
+
+    .card-body h3 {
+      font-size: 21px;
+      margin: 0 0 8px;
+      letter-spacing: -.02em;
+    }
+
+    .card-body p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+      min-height: 70px;
+    }
+
+    .watch {
+      appearance: none;
+      border: 1px solid var(--blue);
+      background: white;
+      color: var(--blue-dark);
+      font: inherit;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .watch:hover,
+    .watch:focus-visible {
+      background: #edf4ff;
+    }
+
+    /* Call to action */
+
+    .cta {
+      text-align: center;
+      background: #edf3fc;
+      border: 1px solid var(--line);
+      padding: 32px 24px;
+      border-radius: 15px;
+      margin-top: 45px;
+    }
+
+    .cta h2 {
+      font-size: 24px;
+    }
+
+    .cta p {
+      max-width: 680px;
+      margin: 10px auto 23px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 23px;
+      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      background: var(--blue-dark);
+    }
+
+    .cta-button:hover {
+      background: #19498f;
+    }
+
+    /* Footer */
+
+    footer {
+      background: white;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: var(--blue-dark);
+    }
+
+    /* Tablet */
+
+    @media (max-width: 860px) {
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .card-body p {
+        min-height: 0;
+      }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(100% - 28px, 440px);
+      }
+
+      .hero {
+        padding: 48px 18px 52px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      main {
+        padding-top: 35px;
+      }
+
+      .card-body {
+        padding: 19px;
+      }
+
+      .topbar-inner {
+        min-height: 64px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+
+      <a class="brand"
+         href="https://www.quality-scape.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        QualityScape
+        <span>YOUR PARTNER IN COMPLIANCE</span>
+      </a>
+
+      <a class="top-link"
+         href="https://www.quality-scape.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Visit QualityScape &rarr;
+      </a>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="eyebrow">
+      eQMS Customer Stories
+    </div>
+
+    <h1>
+      Real Experiences. Real Results.
+    </h1>
+
+    <p>
+      Digital Quality Journeys in Life Sciences
+    </p>
+
+  </section>
+
+  <!-- CUSTOMER STORIES -->
+
+  <main class="container">
+
+    <div class="section-intro">
+
+      <h2>Hear From Our Customers</h2>
+
+      <p>
+        Explore firsthand perspectives from life sciences
+        organisations on their experiences adopting
+        digital quality management.
+      </p>
+
+    </div>
+
+    <div class="cards" id="stories">
+
+      <!-- ESMS GLOBAL -->
+
+      <article class="card">
+
+        <div class="player-shell">
+
+          <button class="poster-button"
+                  type="button"
+                  aria-label="Play ESMS Global customer story">
+
+            <img
+              src="https://qualityscape.github.io/ESMS/ESMS%20Thumbnail.png"
+              alt="ESMS Global customer video thumbnail"
+              loading="lazy"
+              draggable="false">
+
+            <span class="play-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 4.5v15l12-7.5z"/>
+              </svg>
+            </span>
+
+          </button>
+
+          <video
+            playsinline
+            webkit-playsinline
+            controls
+            controlsList="nodownload noplaybackrate noremoteplayback"
+            disablePictureInPicture
+            disableRemotePlayback
+            preload="none"
+            oncontextmenu="return false"
+            aria-label="ESMS Global customer story"
+            data-src="https://qualityscape.github.io/ESMS/Simploud%20Testimonials_ESMS.mp4">
+          </video>
+
+        </div>
+
+        <div class="card-body">
+
+          <h3>ESMS Global</h3>
+
+          <p>
+            Hear the ESMS Global team's experience of
+            adopting digital quality management in
+            their operations.
+          </p>
+
+          <button class="watch" type="button">
+            Watch Customer Story &rarr;
+          </button>
+
+        </div>
+
+      </article>
+
+      <!-- NANOX VISION -->
+
+      <article class="card">
+
+        <div class="player-shell">
+
+          <button class="poster-button"
+                  type="button"
+                  aria-label="Play Nanox Vision customer story">
+
+            <img
+              src="https://qualityscape.github.io/Nanox/Nanox%20Thumbnail.png"
+              alt="Nanox Vision customer video thumbnail"
+              loading="lazy"
+              draggable="false">
+
+            <span class="play-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 4.5v15l12-7.5z"/>
+              </svg>
+            </span>
+
+          </button>
+
+          <video
+            playsinline
+            webkit-playsinline
+            controls
+            controlsList="nodownload noplaybackrate noremoteplayback"
+            disablePictureInPicture
+            disableRemotePlayback
+            preload="none"
+            oncontextmenu="return false"
+            aria-label="Nanox Vision customer story"
+            data-src="https://qualityscape.github.io/Nanox/Simploud%20Testimonials_Nanox.mp4">
+          </video>
+
+        </div>
+
+        <div class="card-body">
+
+          <h3>Nanox Vision</h3>
+
+          <p>
+            Learn about Nanox Vision's perspective on
+            selecting and using a digital quality
+            management solution.
+          </p>
+
+          <button class="watch" type="button">
+            Watch Customer Story &rarr;
+          </button>
+
+        </div>
+
+      </article>
+
+      <!-- IONETIX -->
+
+      <article class="card">
+
+        <div class="player-shell">
+
+          <button class="poster-button"
+                  type="button"
+                  aria-label="Play Ionetix customer story">
+
+            <img
+              src="https://qualityscape.github.io/Ionetix/Ionetix%20Thumbnail.png"
+              alt="Ionetix customer video thumbnail"
+              loading="lazy"
+              draggable="false">
+
+            <span class="play-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 4.5v15l12-7.5z"/>
+              </svg>
+            </span>
+
+          </button>
+
+          <video
+            playsinline
+            webkit-playsinline
+            controls
+            controlsList="nodownload noplaybackrate noremoteplayback"
+            disablePictureInPicture
+            disableRemotePlayback
+            preload="none"
+            oncontextmenu="return false"
+            aria-label="Ionetix customer story"
+            data-src="https://qualityscape.github.io/Ionetix/Simploud%20Testimonials_Ionetix.mp4">
+          </video>
+
+        </div>
+
+        <div class="card-body">
+
+          <h3>Ionetix</h3>
+
+          <p>
+            Discover how Ionetix approached its digital
+            quality management journey in the life
+            sciences sector.
+          </p>
+
+          <button class="watch" type="button">
+            Watch Customer Story &rarr;
+          </button>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <!-- CONTACT SECTION -->
+
+    <section class="cta" aria-labelledby="cta-heading">
+
+      <h2 id="cta-heading">
+        Explore Digital Quality Management
+      </h2>
+
+      <p>
+        Interested in learning how Matrix Quality
+        (formerly Simploud) could support your
+        organisation's quality processes?
+        Let's start a conversation.
+      </p>
+
+      <a class="cta-button"
+         href="https://www.quality-scape.com/contact"
+         target="_blank"
+         rel="noopener noreferrer">
+        Contact QualityScape &rarr;
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <span>
+        &copy; <span id="year">2026</span>
+        QualityScape. All rights reserved.
+      </span>
+
+      <a href="https://www.quality-scape.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+        www.quality-scape.com
+      </a>
+
+    </div>
+
+  </footer>
+
+  <!-- VIDEO PLAYBACK AND PROTECTION -->
+
+  <script>
+    'use strict';
+
+    // Update copyright year automatically.
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+
+    const shells = [
+      ...document.querySelectorAll('.player-shell')
+    ];
+
+    const videos = shells.map(
+      shell => shell.querySelector('video')
+    );
+
+    // Play one video at a time.
+    function playStory(shell) {
+
+      const video = shell.querySelector('video');
+
+      videos.forEach(other => {
+        if (other !== video) {
+          other.pause();
+        }
+      });
+
+      // Load the video only when requested.
+      if (!video.src) {
+        video.src = video.dataset.src;
+      }
+
+      shell.classList.add('is-playing');
+
+      video.play().catch(() => {
+        // Native play controls remain available.
+      });
+
+    }
+
+    // Thumbnail click events.
+    shells.forEach(shell => {
+
+      const poster = shell.querySelector('.poster-button');
+      const video = shell.querySelector('video');
+
+      poster.addEventListener('click', () => {
+        playStory(shell);
+      });
+
+      // Pause the previous video.
+      video.addEventListener('play', () => {
+
+        videos.forEach(other => {
+          if (other !== video) {
+            other.pause();
+          }
+        });
+
+      });
+
+      // Disable right-click on videos.
+      video.addEventListener('contextmenu', event => {
+        event.preventDefault();
+      });
+
+    });
+
+    // Watch Video buttons.
+    document.querySelectorAll('.card').forEach(card => {
+
+      const button = card.querySelector('.watch');
+
+      button.addEventListener('click', () => {
+
+        const shell = card.querySelector('.player-shell');
+
+        playStory(shell);
+
+        // Bring video into view on mobile devices.
+        if (
+          window.matchMedia('(max-width: 620px)').matches
+        ) {
+          shell.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+        }
+
+      });
+
+    });
+
+    // Prevent thumbnail right-click and dragging.
+    document.querySelectorAll('.poster-button img')
+      .forEach(img => {
+
+        img.addEventListener('contextmenu', event => {
+          event.preventDefault();
+        });
+
+        img.addEventListener('dragstart', event => {
+          event.preventDefault();
+        });
+
+      });
+
+  </script>
+
+</body>
+</html>
